@@ -3,6 +3,7 @@ package com.example.AAR;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "tbl_aa")
@@ -11,6 +12,8 @@ public class AA {
 	private String id;
 	private String status;
 	private String url;
+	private String dir;
+	@Transient
 	private String[] aa;
 	private int x;
 	private int y;
@@ -19,6 +22,12 @@ public class AA {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public String getDir() {
+		return dir;
+	}
+	public void setDir(String dir) {
+		this.dir = dir;
 	}
 	public String getStatus() {
 		return status;
